@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<style>
+		table{
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 50%%;
+			}
+
+			td, th {
+			  border: 1px solid #dddddd;
+			  text-align: left;
+			  padding: 8px;
+			}
+
+			tr:nth-child(even) {
+			  background-color: #dddddd;
+			}
+	</style>
+</head>
+<body>
+	<p>Input physicalPoint , chemistryPoint, biologicalPoint</p>
+	<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+	<table>
+		<tr>
+			<th><b>Total</b></th>
+			<th><b>Average</b></th>
+		</tr>
+		<tr>
+			<td id="total"></td>
+			<td id="average"></td>
+		</tr>
+	</table>
+	<script>
+		function myFunc(){
+
+			let average, total;
+
+			let physicalPoint = prompt("Input physicalPoint ");
+			let chemistryPoint = prompt("Input chemistryPoint ");
+			let biologicalPoint = prompt("Input biologicalPoint")
+
+			total = parseInt(physicalPoint) + parseInt(chemistryPoint) + parseInt(biologicalPoint);
+			average = total/3;
+			// document.write("Total: " + total);
+			// document.write("<br>");
+			// document.write("average: " + average);
+			document.getElementById("average").innerHTML = average;
+			document.getElementById("total").innerHTML = total;
+			}
+	</script>
+</body>
+</html>

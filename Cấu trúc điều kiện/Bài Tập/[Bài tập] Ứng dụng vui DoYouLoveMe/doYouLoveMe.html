@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b>Do you love Me ???</b></h1><br>
+		<button type="button" onclick="yes()" id="yes" style="left: 50px; top: 50px; position: relative;"><b>Yes :)</b></button>
+		<button type="button" onmouseover="no()" id="no" style="left: 50px; top: 50px; position: relative;"><b>No :(</b></button>
+	</body>
+	<script>
+		function yes() {
+			alert("<3");
+		}
+		function no() {
+			// let w = window.innerWidth;
+			// let h = window.innerWidth;
+			let w = Math.floor(Math.random() * 1000);
+			let h = Math.floor(Math.random() * 800);
+			document.getElementById("no").style.left = w + "px";
+			document.getElementById("no").style.top = h + "px";
+		}
+	</script>
+</html>

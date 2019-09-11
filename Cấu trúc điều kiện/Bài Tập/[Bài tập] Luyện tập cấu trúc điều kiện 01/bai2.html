@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h1>Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10</h1>
+	<b>Nhập tuổi: </b> <input type="text" id="age">
+	<button type="button" onclick="check()">Check</button>
+
+	<script>
+		function check() {
+			let age = document.getElementById("age").value;
+			parseInt(age);
+
+			if (age === 15) {
+				alert("Đủ tuổi học lớp 10");
+			}
+			else{
+				alert("ko đủ tuổi học lớp 10");
+			}
+		}
+	</script>
+
+</body>
+</html>
+		
+

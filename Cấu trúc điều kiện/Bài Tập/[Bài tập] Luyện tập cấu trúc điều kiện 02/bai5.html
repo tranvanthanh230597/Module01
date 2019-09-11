@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b>Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</b></h1>
+		<p>Input length </p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<div id="acreage"></div>
+		<script>
+			function myFunc(){
+
+
+				let length = prompt("Input length (met) ");
+				let height = prompt("Input height (met) ");
+
+				acreage = parseInt(length) * parseInt(height) /2 ;
+				document.getElementById("acreage").innerHTML = "acreage: "+acreage;
+				}
+		</script>
+	</body>
+</html>

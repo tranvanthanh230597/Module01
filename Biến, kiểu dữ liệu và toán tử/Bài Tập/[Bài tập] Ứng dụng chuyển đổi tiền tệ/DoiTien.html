@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h1>Đổi tiền :)</h1>
+
+	<b>Amount:</b>    <input type="text" id="amount"> <br>  <br>
+
+	<b>From Currency: </b> 
+	<select id="fromCurrency">
+		<option value="VND" selected >VND</option>
+		<option value="USD">USD</option>
+	</select>
+	<br><br>
+
+	<b>To Currency: </b>
+	<select id="toCurrency">
+		<option value="USD" selected=>USD</option>
+		<option value="vietnam">VND</option>
+	</select>
+
+	<br><br>
+	<button type="button" onclick="convert()">Convert</button>
+
+	<br><br>
+	<div id="result"></div>
+
+
+
+
+	<script>
+		function convert(){
+
+			let amount = document.getElementById("amount").value;
+			let from   = document.getElementById("fromCurrency").value;
+			let to     = document.getElementById("toCurrency").value;
+
+			const ex = 20000;
+			let temp = amount;
+
+			amount = parseInt(amount);
+
+			if(from == "USD"){
+				temp = amount * ex ;
+			}
+			if(to == "USD"){
+				temp = amount / ex ;
+				document.getElementById("result").innerHTML = "result: " + temp + " USD";
+			}
+			else{
+				document.getElementById("result").innerHTML = "result: " + temp + " VND";
+			}
+		}
+
+	</script>
+</body>
+</html>
+		

@@ -1,0 +1,49 @@
+<!-- Bậc 1: 4 triệu đồng/tháng 0%;
+Bậc 2: Trên 4 - 6 triệu đồng/tháng: 5%;
+Bậc 3: Trên 6 - 9 triệu đồng: 10%;
+Bậc 4: Trên 9 - 14 triệu đồng/tháng: 15%;
+Bậc 5: trên 14 - 24 triệu đồng/tháng: 20%;
+Bậc 6: Trên 24 - 44 triệu đồng/tháng: 25%;
+Bậc 7: Trên 44 - 84 triệu đồng/tháng: 30%;
+Bậc 8: Trên 84 triệu đồng: 35%. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b> Viết chương trình tính thuế thu nhập cá nhân</b></h1>
+		<p>Nhập lương</p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<script>
+			function myFunc(){
+				let mySalary = parseFloat(prompt("Nhập lương (triệu đồng)"));
+				let tax;
+				if (mySalary < 4) {
+					tax = 0;
+				}else if (mySalary < 6) {
+					tax = mySalary *5/100;
+				}
+				else if (mySalary < 9) {
+					tax = mySalary *10/100;
+				}
+				else if (mySalary < 14) {
+					tax = mySalary *15/100;
+				}
+				else if (mySalary < 24) {
+					tax = mySalary *20/100;
+				}
+				else if (mySalary < 44) {
+					tax = mySalary *25/100;
+				}
+				else if (mySalary < 84) {
+					tax = mySalary *30/100;
+				}
+				else{
+					tax = mySalary *35/100;
+				}
+				alert("Thuế thu nhập cá nhân: "+tax);
+			}
+		</script>
+	</body>
+</html>

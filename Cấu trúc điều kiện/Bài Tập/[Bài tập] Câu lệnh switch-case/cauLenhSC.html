@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b>Phép tính được số ngày trong một tháng :)</b></h1><br>
+		Nhập tháng: <input type="text" id="month"><br>
+		<button type="button" onclick="checkMonth()">Check</button>
+	</body>
+	<script>
+		function checkMonth() {
+			let month = parseFloat(document.getElementById("month").value);
+			switch (month) {
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+					alert("tháng " + month + " có 31 ngày");
+					break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					alert("tháng " + month + " có 30 ngày");
+				default:
+					alert("tháng " + month + " có 28 hoặc 29 ngày");
+					break;
+			}
+		}
+	</script>
+</html>

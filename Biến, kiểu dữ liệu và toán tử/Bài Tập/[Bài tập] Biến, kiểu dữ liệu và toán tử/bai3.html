@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+	</head>
+	<body>
+		<p>Input Radius (R)</p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<div id="acreage"></div>
+		<script>
+			function myFunc(){
+
+				const Pi = 3.14;
+
+				let acreage;
+
+				let radius = prompt("Input Radius ");
+
+				acreage = Math.pow( parseInt(radius), 2 )*Pi ;
+
+				document.getElementById("acreage").innerHTML = acreage;
+				}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h1>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h1>
+	<b>Nhập doanh số bán hàng: </b> <input type="text" id="sales"><br>
+	<button type="button" onclick="check()">Check</button>
+
+	<script>
+		function check() {
+			let sales = parseFloat(document.getElementById("sales").value);
+			let Commission; //hoa hồng
+			if (sales <= 100) {
+				Commission = sales *5/100;
+			}
+			else if(sales <= 300){
+				Commission = sales *10/100;
+			}
+			else{
+				Commission = sales *20/100;
+			}
+			alert("Hoa hồng nhận đc là: "+Commission);
+		}
+	</script>
+
+</body>
+</html>
+		
+

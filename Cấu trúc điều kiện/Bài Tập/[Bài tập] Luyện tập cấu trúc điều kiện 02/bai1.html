@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<p>Input oC (Celsius)</p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<div id="Fahrenheit"></div>
+		<script>
+			function myFunc(){
+
+				let Fahrenheit;
+
+				let Celsius = prompt("Input Celsius ");
+
+				Fahrenheit = parseInt(Celsius)*9/5 +32 ;
+				document.getElementById("Fahrenheit").innerHTML = Fahrenheit+ " o F";
+				}
+		</script>
+	</body>
+</html>

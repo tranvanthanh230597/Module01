@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<h1>What is your browser ??? </h1>
+	<input type="text" id="browser">
+	<button type="button" onclick="check()">check	</button>
+  <script>
+  	function check() {
+  		let browser = document.getElementById("browser").value;
+  		// alert(browser);
+  		switch (browser) {
+  			case ("edge"):
+  				alert("You've got the Edge!");
+  				break;
+  			case ("Chrome"):
+  			case ("Firefox"):
+  			case ("Safari"):
+  			case ("Opera"):
+  				alert("Okay we support these browsers too")
+  				break;
+  			default:
+  				alert("We hope that this page looks ok!")
+  				break;
+  		}
+  	}
+  </script>
+</body>
+
+</html>

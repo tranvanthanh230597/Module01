@@ -1,0 +1,35 @@
+<!-- Tiền thuê bao điện kế: 1000đ/tháng
+
+Định mức sử dụng điện cho mỗi hộ là: 50 KW với giá 230đ/KW
+
+Nếu phần vượt định mức <= 50KW thì tính giá 480đ/KW
+
+Nếu 50KW < phần vượt định mức < 100KW thì tính giá 700đ/KW
+
+Nếu phần vượt định mức <= 100KW thì tính giá 900đ/KW -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b> Viết chương trình tính giá điện</b></h1>
+		<p>Nhập số điện sử dụng</p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<script>
+			function myFunc(){
+				let myNumber = parseInt(prompt("Nhập số điện sử dụng (kw)"));
+				let monney;
+				if (myNumber <= 50) {
+					monney = 10000 + myNumber*480;
+				}else if (myNumber <= 100) {
+					monney = 10000 + myNumber*700;
+				}
+				else{
+					monney = 10000 + myNumber*900;
+				}
+				alert("Số tiền điện: "+monney);
+			}
+		</script>
+	</body>
+</html>

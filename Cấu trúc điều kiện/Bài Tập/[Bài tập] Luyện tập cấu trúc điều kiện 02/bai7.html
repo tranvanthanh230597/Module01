@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b> Giải phương trình bậc 2 ax^2 + bx +c =0 ( a != 0)</b></h1>
+		<p>Input value a,b,c </p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<div id="experience"></div>
+		<script>
+			function myFunc(){
+
+
+				let a = prompt("Input value a ");
+				let b = prompt("Input value b ");
+				let c = prompt("Input value c ");
+				let xa,xb;
+
+				let denta = Math.pow(b, 2)-4 *a*c;
+				if (denta < 0) {
+					document.getElementById("experience").innerHTML= "phương trình vô nghiện";
+				}
+				else if (denta == 0) {
+					xa = xb =  -(b)/(2*a);
+					document.getElementById("experience").innerHTML= "phương trình có nghiệm kép là = xb = " + xa;
+				}
+				else{
+					xa = (-b+Math.sqrt(denta))/(2*a);
+					xb = (-b-Math.sqrt(denta))/(2*a);
+					document.getElementById("experience").innerHTML= "phương trình có 2 nghiệm là xa = " + xa + " xb= "+xb;
+				}
+				}
+		</script>
+	</body>
+</html>

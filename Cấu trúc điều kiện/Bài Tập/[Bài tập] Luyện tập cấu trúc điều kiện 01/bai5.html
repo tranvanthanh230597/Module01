@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h1>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h1>
+	<b>Nhập điểm bài kiểm tra: </b> <input type="text" id="testPoint"><br>
+	<b>Nhập điểm thi giữa kỳ: </b> <input type="text" id="midPoint"><br>
+	<b>Nhập điểm thi cuối kỳ: </b> <input type="text" id="finalPoint"><br>
+	<button type="button" onclick="check()">Check</button>
+
+	<script>
+		function check() {
+			let testPoint = parseFloat(document.getElementById("testPoint").value);
+			let midPoint = parseFloat(document.getElementById("midPoint").value);
+			let finalPoint = parseFloat(document.getElementById("finalPoint").value);
+			
+			let AveragePoint = ( testPoint + midPoint*2 + finalPoint*3 )/6;
+			if (AveragePoint > 8.0) {
+				alert("A");
+			}else if (AveragePoint >7.0) {
+				alert("B");
+			}else if (AveragePoint >6.0){
+				alert("C");
+			}else if(AveragePoint >4.0){
+				alert("D");
+			}else 
+				alert("F");
+		}
+	</script>
+
+</body>
+</html>
+		
+

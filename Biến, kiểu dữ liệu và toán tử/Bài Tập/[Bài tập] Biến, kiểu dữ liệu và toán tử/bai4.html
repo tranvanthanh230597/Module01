@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test</title>
+	</head>
+	<body>
+		<p>Input Radius (R)</p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<div id="perimeter"></div>
+		<script>
+			function myFunc(){
+
+				const Pi = 3.14;
+
+				let perimeter;
+
+				let radius = prompt("Input Radius ");
+
+				perimeter = parseInt(radius)*2*Pi ;
+
+				document.getElementById("perimeter").innerHTML = perimeter;
+				}
+		</script>
+	</body>
+</html>

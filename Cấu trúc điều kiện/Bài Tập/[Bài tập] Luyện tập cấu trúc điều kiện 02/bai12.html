@@ -1,0 +1,23 @@
+<!-- Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b> Viết chương trình tính lãi ngân hàng khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng</b></h1>
+		<p>Nhập số điện sử dụng</p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<script>
+			function myFunc(){
+				let myMonney = parseInt(prompt("Nhập số tiền:"));
+				let myMonth = parseInt(prompt("Nhập số tháng:"));
+				let myInterestRate = parseInt(prompt("Nhập lãi xuất::"));
+
+				let interest = myMonney*Math.pow(1+(myInterestRate/100), myMonth);
+				alert("Tiền có đc sau " +myMonth +" tháng là: "+interest);
+
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h1>Kiểm Tra A chia hết cho B hay ko</h1>
+	<b>Nhập A: </b> <input type="text" id="A">
+	<b>Nhập B: </b> <input type="text" id="B">
+	<button type="button" onclick="check()">Check</button>
+
+	<script>
+		function check() {
+			let A = document.getElementById("A").value;
+			let B = document.getElementById("B").value;
+			parseInt(A);
+			parseInt(B);
+
+			if ((A % B) === 0) {
+				alert("A chia hết cho B");
+			}
+			else{
+				alert("A ko chia hết cho B");
+			}
+		}
+	</script>
+
+</body>
+</html>
+		
+

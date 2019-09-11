@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b> Giải phương trình bậc 1</b></h1>
+		<p>Input value a,b </p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<div id="experience"></div>
+		<script>
+			function myFunc(){
+
+
+				let a = prompt("Input value a ");
+				let b = prompt("Input value b ");
+
+				if (a == 0) {
+					if (b == 0) {
+						document.getElementById("experience").innerHTML = "Phương trình vô số nghiện";
+					}
+					else{
+						document.getElementById("experience").innerHTML = "Phương trình vô nghiện";
+					}
+				}
+				else{
+					let x = -b/a;
+					document.getElementById("experience").innerHTML = "Phương trình có nghiện: " +x;
+
+				}
+				}
+		</script>
+	</body>
+</html>

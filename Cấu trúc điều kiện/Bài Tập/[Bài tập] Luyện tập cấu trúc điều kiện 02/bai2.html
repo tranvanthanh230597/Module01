@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<p>Input length (met)</p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<div id="length"></div>
+		<script>
+			function myFunc(){
+
+
+				let length = prompt("Input length (met) ");
+
+				length = parseInt(length)*3.2808 ;
+				document.getElementById("length").innerHTML = length+ " feet";
+				}
+		</script>
+	</body>
+</html>

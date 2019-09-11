@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b>Chỉ số khối cơ thể (Body mass index-BMI)</b></h1><br>
+		Nhập weight (kg) : <input type="text" id="weight"><br>
+		nhập height (m)  :	<input type="text" id="height"><br>
+		<button type="button" onclick="checkBMI()">Check</button>
+	</body>
+	<script>
+		function checkBMI() {
+			let weight = parseFloat(document.getElementById("weight").value);
+			let height = parseFloat(document.getElementById("height").value);
+			let BMI = weight/ Math.pow(height, 2);
+			console.log(BMI);
+			if (BMI < 18.5) {
+				alert('Underweight');
+			}
+			else if(BMI < 25.0){
+				alert("Normal");
+			}
+			else if(BMI < 30.0){
+				alert("Overweight");
+			}
+			else 
+				calert('Obese');
+		}
+	</script>
+</html>

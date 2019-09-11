@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b>Tính diện tích hình vuông khi biết cạnh a.</b></h1>
+		<p>Input length </p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<div id="acreage"></div>
+		<script>
+			function myFunc(){
+
+
+				let length = prompt("Input length (met) ");
+
+				acreage = Math.pow(parseInt(length),2) ;
+				document.getElementById("acreage").innerHTML = "acreage: "+acreage;
+				}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<h1>Kiểm Tra Năm Nhuận</h1>
+	<b>Nhập năm cần khiểm tra: </b> <input type="text" id="year">
+	<button type="button" onclick="checkYear()">Check</button>
+	<div id="result"></div>
+
+	
+	<script>
+		function checkYear(){
+			let year = document.getElementById("year").value;
+			let result;
+			if( year % 4 == 0){
+				if (year % 100 ==0 ) {
+					if (year % 400 == 0) {
+						result = 1;
+					}
+					else{
+						result = 0;
+					}
+				}
+				else {
+					result = 1;
+				}
+			}
+			else{
+				result =0;
+			}
+			if (result == 1) {
+				document.getElementById("result").innerHTML = year + " is leap year";
+			}
+			else{
+				document.getElementById("result").innerHTML = year + " is not leap year";
+			}
+		}
+	</script>
+
+</body>
+</html>
+		
+

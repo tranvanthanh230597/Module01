@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b>Bài 1</b></h1>
+		<br><br>
+		<b>Nhập A: </b> <input type="text" id="A"><br>
+		<b>Nhập B: </b> <input type="text" id="B"><br>
+		<button type="button" onclick="check()">Check</button>
+		<script>
+			function check(){
+
+				let A = document.getElementById("A").value;
+				let B = document.getElementById("B").value;
+				if ((parseInt(A) + parseInt(B)) < 4 ) {
+					alert("Below");
+				}
+				else{
+					alert("Over");
+				}
+			}
+		</script>
+	</body>
+</html>

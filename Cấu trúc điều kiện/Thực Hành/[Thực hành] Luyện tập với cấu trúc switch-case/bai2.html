@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<h1>What is your number ??? </h1>
+	<input type="text" id="number">
+	<button type="button" onclick="check()">check	</button>
+  <script>
+  	function check() {
+  		let number = document.getElementById("number").value;
+  		switch (number) {
+  			case ("0"):
+  				alert("0");
+  				break;
+  			case ("1"):
+  				alert("1");
+  				break;
+  			case ("2"):
+  			case ("3"):
+  				alert("2, 3")
+  				break;
+  		}
+  	}
+  </script>
+</body>
+
+</html>

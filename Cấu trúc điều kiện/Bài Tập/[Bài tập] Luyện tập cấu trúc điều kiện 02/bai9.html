@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+	<body>
+		<h1><b> Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.</b></h1>
+		<p>Nhập vào 3 cạnh</p>
+		<button type="button" onclick="myFunc()"> Click Here</button><br><br>
+		<script>
+			function myFunc(){
+
+
+				let a = parseFloat(prompt("Input a "));
+				let b = parseFloat(prompt("Input b "));
+				let c = parseFloat(prompt("Input c "));
+				if (a > 0 && b > 0 && c > 0) {
+					if ((a + b) > c) {
+						if ((b+c) > a) {
+							if ((a+c) > b) {
+								alert("Đây là 3 cạnh của tam giác");
+							}
+							else alert("Đây ko phải là 3 cạnh của tam giác");
+						}else alert("Đây ko phải là 3 cạnh của tam giác");
+					}else alert("Đây ko phải là 3 cạnh của tam giác");
+				}else alert("Đây là ko phải 3 cạnh của tam giác");
+				}
+		</script>
+	</body>
+</html>

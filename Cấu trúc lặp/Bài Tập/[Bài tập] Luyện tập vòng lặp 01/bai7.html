@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bai 7</title>
+</head>
+<body>
+	<script>
+		let SON = "";//sequence of numbers
+		for (let i = 1 ; i <100; i++) {
+			let n = i ;
+			if(((n % 3) == 0) && ((n % 5) == 0)) {
+				n = "FizzBuzz";
+			}
+			if((n % 3) == 0) {
+				n = "Fizz";
+			}
+			if((n % 3) == 0) {
+				n = "Buzz";
+			}
+			SON += n + " ";
+		}
+		document.write(SON);
+	</script>
+</body>
+</html>

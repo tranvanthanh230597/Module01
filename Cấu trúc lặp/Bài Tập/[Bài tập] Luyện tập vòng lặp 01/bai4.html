@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai4</title>
+</head>
+<body>
+	<script>
+		let n1 = 0,
+			n2 = 1,
+			n3,
+			num,
+			SON ="";//sequence of numbers
+		num = prompt("Nhập phần tử thứ N chia hết cho 5");
+		for (let i =0 ; i < num; ) {
+			n3 = n1 + n2;
+			if ((n3 % 5) == 0) {
+				SON += n3 + " ";
+				i++
+			}
+			n1 = n2;
+			n2 = n3;
+		}
+		document.write(SON);
+	</script>
+</body>
+</html>

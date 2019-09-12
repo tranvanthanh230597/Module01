@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai5</title>
+</head>
+<body>
+	<script>
+		let n1 = 0,
+			n2 = 1,
+			n3,
+			amount,
+			total = "";//sequence of numbers
+		amount = prompt("Nhập vào số lượng phần tử trong dãy fibonacci");
+		total =  n1 + n2;
+		for (let i =2 ; i < amount; i++) {
+			n3 = n1 + n2;
+			total += n3;
+			n1 = n2;
+			n2 = n3;
+		}
+		document.write(total);
+	</script>
+</body>
+</html>

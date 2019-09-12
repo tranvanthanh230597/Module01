@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bai6</title>
+</head>
+<body>
+	<script>
+		let total = 0,
+			amount,
+			n = 0;
+		amount = prompt("nhập vào số lượng số tự nhiên chia hết cho 7 cần + :");
+		for (let i = 0 ;n <= amount;i++ ) {
+			if (( i % 7 )==0) {
+				total += i;
+				n++;
+			}
+		}
+		alert(total);
+	</script>
+</body>
+</html>

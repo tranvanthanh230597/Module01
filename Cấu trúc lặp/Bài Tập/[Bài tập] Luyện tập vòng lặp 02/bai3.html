@@ -6,7 +6,10 @@
 <body>
 	<script>
 		let n = 4;
-		// tam giac vuong dung
+		// tam giac vuong dung *
+		// 					   **
+		// 					   ***
+		// 					   ****
 		for( let i = 1 ; i <= n ; i++){
 			for(let j = 1 ; j <= i ; j++){
 				document.write("*");
@@ -15,7 +18,10 @@
 		}	
 		document.write("<br>");
 
-		// tam giac vuong nguoc
+		// tam giac vuong nguoc ****
+		// 				        ***
+		// 				        **
+		// 				        *
 		for(let i = 4 ; i > 0 ; i--){
 			for(let j =1 ; j <= i ; j ++ ){
 				document.write("*");
@@ -27,15 +33,42 @@
 		// 					 **
 		// 					***
 		// 				   ****
-		// document.write("&nbsp;*");
-		document.write("<br>");
-		for( let i = 1 ; i <= n ; i++){
-			for(let j = 1 ; j <= i ; j++){
-				document.write("*");
+		// document.write("&nbsp;");
+		// 
+		for(let i = 3 ; i >= 0; i--){
+			for(let j = 0 ; j < 4 ; j++ ){
+				// document.write(i +""+ j+" ");
+				if(j >= i){
+					document.write("*");
+				}
+				else{
+					document.write("&nbsp;&nbsp;");
+				}
+
 			}
 			document.write("<br>");
-		}	
+		} 
+
+
 		document.write("<br>");
+		
+
+
+		// tam gaic vuong     ****
+		// 					   ***
+		// 						**
+		// 				   		 *
+		for(let i = 4 ; i > 0 ; i--){
+			for(let j = 4 ; j >0 ; j-- ){
+				if (i < j) {
+					document.write("&nbsp;&nbsp;");
+				}
+				else
+					document.write("*");
+
+			}
+			document.write("<br>");
+		} 
 	</script>
 </body>
 </html>

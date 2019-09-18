@@ -1,10 +1,13 @@
 let x = [-3, 5, 1, 3, 2, 10],
-	value = prompt("enter your number");
+	value = prompt("enter your number"),
+	e;
 
-for(var i = 0; i < x.length -1;  i++){
+for(var i = 0; i < x.length;  i++){
 	if (value == x[i]) {
-		alert("Value " + x[i] + "found at " + i);
+		e ="Value " + x[i] + "found at " + i;
+		break;
 	}
 	else
-		alert("Value " + value + " is not found" );
+		e ="Value " + value + " is not found" ;
 }
+alert(e);

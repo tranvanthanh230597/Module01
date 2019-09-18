@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let count =prompt("Enter number");
+		let a = new Array(count);
+		for(var i = 0; i < count; i++){
+			a[i] = parseInt(prompt("Enter value" ));
+		}
+		let V = parseInt(prompt("Enter V"));
+		let myLocation = new Array();
+
+		for(var i = 0; i < count; i++){
+			if (a[i] === V) {
+				for(var j = i; j < count-1; j++){
+					a[j] = a[j +1];
+				}
+				a[(count-1)] = 0;
+			} 
+		}
+		console.log(a);
+	</script>
+</body>
+</html>

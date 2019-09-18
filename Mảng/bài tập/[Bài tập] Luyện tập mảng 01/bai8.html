@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		function compareNumbers(a, b) {
+		  return a - b;
+		}
+		let count =prompt("Enter number");
+		let a = new Array(count);
+		let num = 0;
+		for(var i = 0; i < count; i++){
+			a[i] = parseInt(prompt("Enter value" ));
+		}
+		a.sort(compareNumbers);
+		console.log(a);
+	</script>
+</body>
+</html>

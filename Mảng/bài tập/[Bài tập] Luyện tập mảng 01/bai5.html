@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let count =prompt("Enter number");
+		let a = new Array(count);
+		let num = 0;
+		for(var i = 0; i < count; i++){
+			a[i] = parseInt(prompt("Enter value" ));
+		}
+		for(var i = 0; i < count; i++){
+			if (a[i] < 0) {
+				num += 1;
+			} 
+		}
+		console.log(num);
+	</script>
+</body>
+</html>

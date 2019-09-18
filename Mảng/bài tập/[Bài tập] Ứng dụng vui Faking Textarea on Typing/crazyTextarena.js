@@ -27,5 +27,3 @@ function crazyTextarena() {
 	n="";
 	setTimeout("crazyTextarena()", 1);
 }
-
-

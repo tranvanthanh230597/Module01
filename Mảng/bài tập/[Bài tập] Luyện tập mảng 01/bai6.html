@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let count =prompt("Enter number");
+		let a = new Array(count);
+		for(var i = 0; i < count; i++){
+			a[i] = parseInt(prompt("Enter value" ));
+		}
+		let V = parseInt(prompt("Enter V"));
+		let myBoolean = false;
+		for(var i = 0; i < count; i++){
+			if (a[i] === V) {
+				myBoolean = true;
+				break;
+			} 
+		}
+		if (myBoolean) {
+			console.log('V is in the array');
+		} else{
+			console.log("V is not in the array");
+		}
+	</script>
+</body>
+</html>

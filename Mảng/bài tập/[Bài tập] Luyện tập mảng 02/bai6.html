@@ -5,8 +5,18 @@
 </head>
 <body>
 	<script>
-		let myFirstString = prompt("Enter your myFirstString");
-		
+		let num = prompt("Enter your number");
+		let str="";
+		arr = new Array(num);
+		for (var i = 0; i < num; i++) {
+			arr[i] = prompt("Enter arr["+i+"]");
+		}
+		for (var i = 0; i < num; i++) {
+			str =arr[i].toString();
+			str = str.replace(/-/g,"_");
+			arr[i] = str;	
+		}
+		console.log(arr);
 	</script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe" , "Regulus"];
+		Zodiacs=[ "Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major" , "Leo"];
+
+		function findStar(star) {
+			for (var i = 0; i < stars.length; i++) {
+				if (star == stars[i] ) {
+					return Zodiacs[i];
+				}
+			}
+			return "Can't found";
+			
+		}
+
+		let star = prompt("Entẻ your star");
+		console.log(findStar(star));
+
+
+	</script>
+</body>
+</html>

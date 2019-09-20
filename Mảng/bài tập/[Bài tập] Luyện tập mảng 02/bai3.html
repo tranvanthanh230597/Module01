@@ -11,8 +11,11 @@
 		for(var i = 0; i < amount; i++){
 			a[i] = prompt("Enter A[" +i +"]");
 		}
-		for(var i = 0, length1 = a.length; i < length1; i++){
-			total += a[i].length;
+		let str = a.toString();
+		for(var i = 0; i < str.length; i++){
+			if (isNaN(str[i]) === false) {
+				total ++;
+			}
 		}
 		console.log(total);	
 	</script>

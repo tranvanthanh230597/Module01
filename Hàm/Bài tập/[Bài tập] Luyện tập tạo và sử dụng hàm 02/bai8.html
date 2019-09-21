@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		function mySwitch(arr) {
+			
+			return arr.reverse();
+		}
+		let n = Math.floor(Math.random()*99 + 1);
+		let arr = new Array(n);
+		for (var i = 0; i < n; i++) {
+			arr[i] = Math.floor(Math.random()*999 + 1);
+		}
+		console.log(arr);
+		console.log(mySwitch(arr));
+	</script>
+</body>
+</html>

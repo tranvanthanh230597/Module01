@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		function mySwitch(num1,num2) {
+			num1 = num1 - num2;
+			num2 = num1 + num2;
+			num1 = num2 - num1;
+			console.log(num1,num2);
+			return [num1,num2];
+		}
+		let num1 = Math.floor(Math.random()*99 + 1);
+		let num2= Math.floor(Math.random()*99 + 1);
+		document.write(num1 +" "+ num2);
+		let a = mySwitch(num1,num2);
+		document.write("<br>" +a);
+	</script>
+</body>
+</html>

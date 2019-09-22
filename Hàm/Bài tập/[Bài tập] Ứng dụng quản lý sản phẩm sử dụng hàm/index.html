@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product</title>
+	<link rel="stylesheet" href="product.css">
+	<script src="product.js"></script>
+</head>
+<body>
+	<b>Add new product</b> 
+	<input type="text" id="nameProduct">
+	<button onclick="addProduct(product)" class="button" >Add</button>
+	<br><br>
+
+	<table  id="product">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Edit</th>
+				<th>Options</th>
+			</tr>
+		</thead>
+		<tbody id="myTbody"> 
+			<script>
+				showProduct(product)
+			</script>
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let circle = function (radius,color) {
+			this.radius = parseFloat(radius);
+			this.color = color;
+
+			this.getRadius = function(){
+				return radius;
+			}
+			this.getColor = function(){
+				return color;
+			}
+			this.getArea = function(){
+				return Math.PI * Math.pow(radius, 2);
+			}
+		}
+
+
+		let Circle = new circle(4,"Red");
+		let Radius = Circle.getRadius();
+		let Area   = Circle.getArea();
+		console.log(Radius);
+		console.log(Area);
+	</script>
+</body>
+</html>

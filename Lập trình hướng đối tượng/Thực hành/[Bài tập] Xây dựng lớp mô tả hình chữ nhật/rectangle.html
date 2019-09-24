@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>
+	<script>
+		function Rectangle(width, height){
+			this.width = width;
+			this.height = height;
+
+			this.getArea = function(){
+				return width*height;
+			}
+			this.getPeripheral= function(){
+				return (width + height)*2;
+			}
+			this.setWidth =function(width){
+				this.width = width;
+			}
+			this.setHeight =function(height){
+				this.height = height;
+			}
+
+			this.getRandom = function(){
+				return Math.floor(Math.random()*255);
+			}
+			//vẽ hình chữ nhật
+			this.createRectangle = function(ctx){
+				
+				let color = this.getRandomColor();
+				console.log(color);
+				let x = Math.random()*window.innerWidth;
+				let y = Math.random()*window.innerHeight;
+
+				ctx.beginPath();
+				ctx.fillStyle = color;
+				ctx.fillRect(x,y,this.width,this.height);
+				ctx.fill();
+				ctx.stroke();
+			}
+
+			this.getRandomColor = function(){
+				let red = this.getRandom();
+				let green = this.getRandom();
+				let blue = this.getRandom();
+				return "rgb("+red + ","+green+","+blue+")";
+			}
+		}
+		let width = Math.floor(Math.random()*80);
+		let height = Math.floor(Math.random()*80);
+		let ctx = document.getElementById("myCanvas").getContext("2d");
+		let rect = new Rectangle(width,height);
+		rect.createRectangle(ctx);
+
+	</script>
+</body>
+</html>

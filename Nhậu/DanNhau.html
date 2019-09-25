@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<script>
+		function DanNhau (name) {
+			this.name = name;
+
+			this.an = function(moi){
+				moi.decrease();
+			}
+			this.uong =function(nuoc){
+				nuoc.decrease();
+			}
+		};
+
+		function Moi (name,weight){
+			this.name = name;
+			this.weight = weight;
+
+			this.decrease = function(){
+				if (this.weight >0 ) {
+					this.weight --;
+				} else {
+					alert("Hết mồi");
+				}
+			}
+			this.info = function(){
+				let info = "Món : " + this.name + " còn " + this.weight;
+				return info;
+			}
+		}
+
+		function Nuoc (name,weight){
+			this.name = name;
+			this.weight = weight;
+
+			this.decrease = function(){
+				if (this.weight >0 ) {
+					this.weight --;
+				} else {
+					alert("Hết mồi");
+				}
+			}
+			this.info = function(){
+				let info = "Món : " + this.name + " còn " + this.weight;
+				return info;
+			}
+		}
+	</script>
+</body>
+</html>

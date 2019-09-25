@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button onclick="lamp.turnOn()"></button>
+	<script>
+		let Battery = function() {
+
+			this.setEnergy = function(energy){
+				this.energy = energy;
+			};
+
+			this.getEnergy =function(){
+				return this.energy;
+			};
+
+			this.decreaseEnergy = function(){
+				if (this.energy > 0 ) {
+					this.energy--;
+				}
+			};
+		};
+		let FlashLamp = function(){
+			this.setBattery = function(battery){
+				this.battery = battery;
+			};
+			this.batteryInfo = function(){
+				return this.battery.getEnergy();
+			};
+			this.light = function(){
+				if (this.status) {
+					console.log("lighting");
+				} 
+				else {
+					console.log("not lighting");
+				}
+			};
+			this.turnOn = function(){
+				if (this.status) {
+					console.log("Lamp is being turned on");
+				} else {
+					this.status = true;
+					this.battery.decreaseEnergy();
+				}
+			};
+			this.turnOff = function(){
+				if (this.status) {
+					this.status = false
+				}
+				else{
+					console.log("Lamp is being turned off");
+				}
+			};
+		}
+
+
+		let battery = new Battery();
+		battery.setEnergy(20);
+
+		let lamp = new FlashLamp();
+		lamp.setBattery(battery);
+
+		document.write("Battery info:" + lamp.batteryInfo() + "<br/>");
+		lamp.light();
+		lamp.turnOn();
+		lamp.light();
+		document.write("Battery info:" + lamp.batteryInfo() + "<br/>");
+		document.write("Turn off<br/>")
+		lamp.turnOff();
+		lamp.light();
+	</script>
+</body>
+</html>

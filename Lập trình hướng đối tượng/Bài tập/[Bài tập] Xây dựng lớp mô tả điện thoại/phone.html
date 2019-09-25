@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let   = function(pinStatus,typingMess,inboxMess,sentMess,phoneStatus) {
+			this.pinStatus =pinStatus;
+			this.typingMess =typingMess;
+			this.inboxMess =inboxMess;
+			this.sentMess =sentMess;
+			this.phoneStatus =phoneStatus;
+
+			this.getPinStatus = function(){
+				return this.pinStatus;
+			}
+			this.getTypingMess = function(){
+				return this.typingMess;
+			}
+			this.getInboxMess = function(){
+				return this.inboxMess;
+			}
+			this.getSentMess = function(){
+				return this.sentMess;
+			}
+			this.getPhoneStatus = function(){
+				return this.phoneStatus;
+			}
+			this.checkOnOff = function(){
+				if (this.phoneStatus == "on") {
+					return true;
+				} 
+				else {
+					return false;
+				}
+			}
+			this.onAndOffPhone= function(){
+				if (this.phoneStatus == "on") {
+					this.phoneStatus = "off";
+				} 
+				else {
+					this.phoneStatus = "on";
+				}
+			}
+			this.chargePhone=function(){
+				this.pinStatus = 100;
+			}
+			this.composerMess = function(mess){
+				this.typingMess = mess;
+			}
+		}
+		let nokia = new phone(90,"","","","on");
+		let iphone = new phone(99,"","","","off");
+	</script>
+</body>
+</html>

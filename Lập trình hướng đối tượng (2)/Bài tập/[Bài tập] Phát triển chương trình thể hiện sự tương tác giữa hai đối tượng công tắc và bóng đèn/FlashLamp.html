@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="lamp.js"></script>
+	<style>
+    table, th, td {
+	      border: 1px solid black;
+	    }
+	    table{
+	      width: 500px;
+	    }
+  	</style>
+</head>
+<body onload="show()">
+	<table>
+	    <tr>
+	      <th>Name</th>
+	      <th id="lampName1"></th>
+	      <th id="lampName2"></th>
+	    </tr>
+	    <tr>
+	      <th>EL Status</th>
+	      <td id="lampStatus1"></td>
+	      <td id="lampStatus2"></td>
+	    </tr>
+	</table>
+<br><br>
+	<table>
+	    <tr>
+	      <th>Name</th>
+	      <th id="">Switch Button</th>
+	    </tr>
+	    <tr>
+	    	<th>Connect lamp</th>
+	    	<th>
+	    		<select id="conectLamp">
+				    <option value="lamp1" id="lampOption1" ></option>
+				    <option value="lamp2" id="lampOption2" ></option>
+				 </select>
+				 <button onclick="conect()">Conect</button>
+	    	</th>
+	    </tr>
+	    <tr>
+	      <th>Options</th>
+	      <th>
+	      	<button onclick="switchLamp.switchOn()">SwitchON</button> 
+	      	<button onclick="switchLamp.switchOff()">SwitchOFF</button>
+	      </th>
+	    </tr>
+	 </table>
+</body>
+</html>

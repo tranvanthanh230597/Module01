@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="RatAndCat.js"></script>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    table{
+      width: 500px;
+    }
+  </style>
+</head>
+<body onload="show()">
+
+  <h2>Cat & Rat:</h2>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th id="Grandfather_Of_TomName"></th>
+      <th id="JerryName"></th>
+    </tr>
+    <tr>
+      <th>Weight</th>
+      <td id="weightGrandfather_Of_Tom"></td>
+      <td id="weightJerry"></td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td id="statusGrandfather_Of_Tom"></td>
+      <td id="statusJerry"></td>
+    </tr>
+    <tr>
+      <th>Say</th>
+      <td><input type="text" id="inputTxtGrandfather_Of_Tom" style="width: 100%"></td>
+      <td><input type="text" id="inputTxtJerry" style="width: 100%"></td>
+    </tr>
+    <tr>
+      <th>Options</th>
+      <th><button onclick="rat2.say()">Say</button></th>
+      <th><button onclick="rat1.say()">Say</button></th>
+    </tr>
+    <tr>
+      <th>Mess</th>
+      <td>
+        <p name="" id="boxGrandfather_Of_Tom" ></p>
+      </td>
+      <td>
+        <p name="" id="boxJerry" ></p>
+      </td>
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table>
+  	<tr>
+      <th>Name</th>
+      <th id="TomName"></th>
+  	</tr>
+  	<tr>
+      <th>Weight</th>
+      <td id="weightTom"></td>
+  	</tr>
+  	<tr>
+      <th>Say</th>
+      <td><input type="text" id="inputTxtTom" style="width: 100%"></td>
+  	</tr>
+  	<tr>
+  	<tr>
+    	<th>Connect lamp</th>
+    	<th>
+    		<select id="conectRat">
+			    <option value="rat2" id="Grandfather_Of_TomOption" ></option>
+			    <option value="rat1" id="JerryOption" ></option>
+			 </select>
+			 <button onclick="Catch()">Catch</button>
+    	</th>
+    </tr>	
+      	<th>Options</th>
+      	<th>
+      		<button onclick="cat.say()">Say</button>
+      		<button onclick="cat.catEat()">Eat</button>
+      	</th>
+  	</tr>
+  	<tr>
+      	<th>Mess</th>
+   	 	<td>
+      		<p name="" id="boxTom" ></p>
+     	</td>
+  	</tr>
+  </table>
+</body>
+</html>

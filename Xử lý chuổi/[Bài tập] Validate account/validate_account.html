@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		function validateAccount(str) {
+	        regexp = /^[_a-z0-9]{6,}$/;
+	        if (regexp.test(str)) {
+	            return true;
+	        } 
+	        return false;
+		}
+		var myAccount = "123abc_";
+	    console.log(validateAccount(myAccount));
+	    var myAccount = "_abc123";
+	    console.log(validateAccount(myAccount));
+	    var myAccount = "______";
+	    console.log(validateAccount(myAccount));
+	    var myAccount = "123456";
+	    console.log(validateAccount(myAccount));
+	    var myAccount = ".@";
+	    console.log(validateAccount(myAccount));
+	    var myAccount = "12345";
+	    console.log(validateAccount(myAccount));
+	    var myAccount = "1234_";
+	    console.log(validateAccount(myAccount));
+	    var myAccount = "abcde ";
+	</script>
+</body>
+</html>

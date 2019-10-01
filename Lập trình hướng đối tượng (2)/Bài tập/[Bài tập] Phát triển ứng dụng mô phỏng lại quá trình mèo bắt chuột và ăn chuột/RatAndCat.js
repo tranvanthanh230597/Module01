@@ -29,6 +29,7 @@ function Cat (name,weight,speed){
 	this.catchRat = function(rat){
 		if (this.speed >= rat.speed) {
 			this.catCatched = rat;
+			alert(this.name + " catched " + rat.name);
 		}
 		else{
 			alert(this.name +" can not catch " + rat.name)
@@ -39,6 +40,7 @@ function Cat (name,weight,speed){
 			this.catCatched.status = false;
 			this.weight += this.catCatched.weight;
 			this.catCatched.weight = 0;
+			this.catCatched="";
 			show();
 		} 
 		else {
@@ -59,12 +61,16 @@ let cat = new Cat("Tom", 30,50);
 function show(){
 	document.getElementById(rat2.name+"Name").innerHTML = rat2.name;
 	document.getElementById(rat1.name+"Name").innerHTML = rat1.name;
+
 	document.getElementById("status"+rat2.name).innerHTML = rat2.die();
 	document.getElementById("status"+rat1.name).innerHTML = rat1.die();
+	document.getElementById("speed"+rat2.name).innerHTML = rat2.speed +" m/phut";;
+	document.getElementById("speed"+rat1.name).innerHTML = rat1.speed +" m/phut";
+	document.getElementById("speed"+cat.name).innerHTML = cat.speed +" m/phut";
 	document.getElementById(cat.name+"Name").innerHTML = cat.name;
-	document.getElementById("weight"+rat2.name).innerHTML = rat2.weight;
-	document.getElementById("weight"+rat1.name).innerHTML = rat1.weight;
-	document.getElementById("weight"+cat.name).innerHTML = cat.weight;
+	document.getElementById("weight"+rat2.name).innerHTML = rat2.weight+ " kg";
+	document.getElementById("weight"+rat1.name).innerHTML = rat1.weight+ " kg";
+	document.getElementById("weight"+cat.name).innerHTML = cat.weight+ " kg";
 
 	document.getElementById(rat2.name+"Option").innerHTML = rat2.name;
 	document.getElementById(rat1.name+"Option").innerHTML = rat1.name;

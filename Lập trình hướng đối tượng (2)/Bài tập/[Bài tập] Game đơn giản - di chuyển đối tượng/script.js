@@ -19,7 +19,6 @@ function hero(image,top,left,size) {
 
 let ironMan = new hero("oke.jpg", 20,30,200);
 function start(){
-	console.log("start");
 	if (ironMan.left < (window.innerWidth - ironMan.size)) {
 		ironMan.moveRight();
 	}

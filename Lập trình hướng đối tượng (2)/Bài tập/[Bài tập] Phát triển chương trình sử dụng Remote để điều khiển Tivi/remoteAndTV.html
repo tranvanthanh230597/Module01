@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="remoteAndTV.js"></script>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      text-align: center;
+    }
+    table{
+      width: 500px;
+    }
+  </style>
+</head>
+<body onload="show()">
+
+  <h2>Cat & Rat:</h2>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th id="TV"></th>
+    </tr>
+    <tr>
+      <th>Channel</th>
+      <td id="channelTV"></td>
+    </tr>
+    <tr>
+      <th>Volume</th>
+      <td id="volumeTV"></td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <td id="statusTV"></td>
+    </tr>
+  </table>
+
+  <br><br>
+
+  <table>
+  	<tr>
+      <th>Name</th>
+      <th id="remoteName"></th>
+  	</tr>
+  	<tr>
+      <th>Remote Channel</th>
+      <td>
+      	<button onclick="remote.remoteChannels(0)"> 0 </button>
+      	<button onclick="remote.remoteChannels(1)"> 1 </button>
+      	<button onclick="remote.remoteChannels(2)"> 2 </button>
+      	<button onclick="remote.remoteChannels(3)"> 3 </button>
+      	<button onclick="remote.remoteChannels(4)"> 4 </button>
+      	<button onclick="remote.remoteChannels(5)"> 5 </button>
+      	<button onclick="remote.remoteChannels(6)"> 6 </button>
+      	<button onclick="remote.remoteChannels(7)"> 7 </button>
+      </td>
+  	</tr>
+    <tr>
+      <th>Remote Volume</th>
+      <td>
+      	<button onclick="volumeUp()">+</button>
+      	<button onclick="volumeDown()">-</button>
+      </td>
+    </tr>
+  	<tr>
+      <th>On Off Tv</th>
+      <td>
+      	<button onclick="remote.onOffTv()">
+      		<img src="remote.jpg" style="width: 20px" alt="">
+      	</button>
+      </td>
+  	</tr>
+  </table>
+</body>
+</html>

@@ -12,9 +12,8 @@ const audioDrop = new Audio();
 audioDrop.src = "audio/drop.mp4";
 
 context.scale(20, 20);
-
+//xử lý đầy hàng
 function arenaSweep() {
-    audioDrop.play();
     let rowCount = 1;
     outer: for(let y = arena.length -1; y > 0; --y){
        for(let x = 0; x < arena[y].length; ++x){
@@ -28,8 +27,11 @@ function arenaSweep() {
        ++y;
        player.score += rowCount *10;
        rowCount *= 2;
+       audioDrop.play();
     }
 }
+
+//kiểm tra thử coi khối player đã ở cuối cùng của màn arena chưa
 function collide(arena, player) {
     const [m, o] = [player.matrix, player.pos];
     for(let y = 0; y < m.length; ++y){
@@ -106,7 +108,7 @@ function createPiece(type) {
 
 function draw() {
     context.drawImage(img, 0,0,12,20);
-    drawMatrix(arena,{ x: 0 , y: 0});
+    drawMatrix(arena,{ x: 0 , y: 0}); //vẽ được khối player khi nó được cố định ở màn arena 
     drawMatrix(player.matrix, player.pos );
 }
 
@@ -122,6 +124,8 @@ function drawMatrix(matrix, offset) {
         });
     });
 }
+
+//dùng để vẽ khối player lên arena
 function merge(arena, player) {
     player.matrix.forEach((row, y) =>{
         row.forEach((value, x) =>{
@@ -131,7 +135,7 @@ function merge(arena, player) {
         });
     });  
 }
-//
+//xử ký khối player rớt xuống
 function playerDrop() {
     player.pos.y ++;
     if (collide(arena, player)) {
@@ -143,14 +147,14 @@ function playerDrop() {
     }
     dropCounter = 0;
 }
-//di chuyển qua về
+//di chuyển qua về ko bị chạy ra khỏi màn arena
 function playerMove(dir) {  
     player.pos.x += dir;
     if (collide(arena,player)) {
         player.pos.x -= dir;
     }
 }
-
+//reset khối player
 function playerReset() {
     const pieces = 'IJLOTSZ';
     player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
@@ -163,7 +167,7 @@ function playerReset() {
         updateScore();
     }               
 }
-
+//hàm quay khối player
 function playerRotate(dir) {
     const pos = player.pos.x;
     let offset = 1;
@@ -179,10 +183,10 @@ function playerRotate(dir) {
     }
 }
 
-//xoay hình
+//hàm xử lý quay
 function rotate(matrix, dir) {
-    for(let y = 0; y < matrix.length; ++y){
-        for( let x = 0 ; x < y; ++x ){
+    for(let y = 0; y < matrix.length; y++){
+        for( let x = 0 ; x < y; x++ ){
             [
                 matrix[x][y],
                 matrix[y][x],
@@ -243,6 +247,7 @@ const player = {
     score: 0,
 }
 
+//xử lý bàn phím
 document.addEventListener("keydown", event =>{
    if (event.keyCode === 37 ) {
     audioMove.play();
@@ -266,6 +271,7 @@ document.addEventListener("keydown", event =>{
    }
 
 });
+
 playerReset();
 updateScore();
 update();

@@ -2,6 +2,8 @@
 const canvas = document.getElementById("tetris");
 const context = canvas.getContext("2d");
 
+const img = new Image();
+img.src = "tanjiro.png";
 const audioMove =  new Audio();
 audioMove.src = "audio/move.mp4";
 const audioRotate = new Audio();
@@ -103,9 +105,7 @@ function createPiece(type) {
 }
 
 function draw() {
-    context.fillStyle = "#000";
-    context.fillRect(0, 0, canvas.width, canvas.height);
-
+    context.drawImage(img, 0,0,12,20);
     drawMatrix(arena,{ x: 0 , y: 0});
     drawMatrix(player.matrix, player.pos );
 }
